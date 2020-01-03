@@ -8,7 +8,12 @@ const Movie = new Schema(
         releaseDate: {type: Number, required: true  },
         orign: { type: String, required: true },
         time: {type: String, require: true },
-        imgSrc:{type:String, required: true}
+        imgSrc:{type:String, required: true},
+        seanses:[{
+            day: {type :String, required: true},
+            hours: [{type: String, required:true}]
+        }]
+        
     },
     { timestamps: true },
 )
