@@ -10,9 +10,10 @@ const Movie = new Schema(
         time: {type: String, require: true },
         imgSrc:{type:String, required: true},
         seanses:[{
-            hours: [{type: String, required:true}],
-            day: {type :String, required: true},
-            
+            hours: {type: String, required:true},
+            day: {type: String, required: true},
+            seats: [{type: Boolean, default: false}],
+            room:{type:String, required:true}
         }]
         
     },

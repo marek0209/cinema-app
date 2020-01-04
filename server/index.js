@@ -1,3 +1,5 @@
+import {seans} from "../client/src/__test__/bookingTicketTest";
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
@@ -5,6 +7,7 @@ const cors = require('cors');
 const db = require('./db');
 const movieRouter = require('./routes/movie-router');
 const userRouter = require('./routes/user-router');
+const seanseRouter = require('./routes/seanse-router');
 
 
 const app = express();
@@ -23,5 +26,5 @@ app.get('/', (req, res) => {
 
 app.use('/api', movieRouter);
 app.use('/api', userRouter);
-
+app.use('/api', seanseRouter);
 app.listen(apiPort, () => console.log(`Server running on port ${apiPort}`));
