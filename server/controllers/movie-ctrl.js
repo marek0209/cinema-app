@@ -120,7 +120,7 @@ getMovies = async (req, res) => {
 };
 
 getSeanse = async (req, res) => {
-    await Movie.findOne.({ _id: req.params.id }, (err, seanse) => {
+    await Movie.findOne({ _id: req.params.id }, (err, seanse) => {
         if (err) {
             return res.status(400).json({ success: false, error: err })
         }
